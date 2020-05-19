@@ -1,29 +1,20 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <lg-aa-navbar>
+      <lg-aa-navbar-header textoLogo="LG lugar de Gente"
+                           logo="https://www.lg.com.br/site2017/uploads/logo.png"></lg-aa-navbar-header>
+    </lg-aa-navbar>
+    <div class="container"></div>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
 
-@Component({
-  components: {
-    HelloWorld,
-  },
-})
+@Component
 export default class App extends Vue {}
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import url('https://cdn1.lg.com.br/autoatendimento/1.0.0/css/lg.build.min.css')
 </style>
