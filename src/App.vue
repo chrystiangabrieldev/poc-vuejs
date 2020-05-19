@@ -13,7 +13,30 @@
         </div>
       </lg-aa-navbar-conteudo>
     </lg-aa-navbar>
-    <lg-aa-painel titulo="Minhas Atividades"></lg-aa-painel>
+
+    <lg-aa-painel titulo="Minhas Atividades">
+        <lg-aa-input-icone icone="glyphicon glyphicon-search"
+                           placeholder="Pesquisar no Portal">
+        </lg-aa-input-icone>
+
+        <lg-aa-botao-icone icone="fa fa-cogs">
+        </lg-aa-botao-icone>
+
+        <lg-aa-botao-icone icone="fa fa-puzzle-piece">
+        </lg-aa-botao-icone>
+
+        <lg-aa-botao-icone icone="fa fa-sliders">
+        </lg-aa-botao-icone>
+
+        <lg-aa-botao-icone icone="fa fa-filter">
+        </lg-aa-botao-icone>
+
+        <lg-aa-botao-toggle iconePrimario="glyphicon glyphicon-th-large"
+                            iconeSecundario="glyphicon glyphicon-th-list"
+                            textoPrimario="Visualizar em Grade"
+                            textoSecundario="Visualizar em Lista">
+        </lg-aa-botao-toggle>
+    </lg-aa-painel>
     <div class="container"></div>
   </div>
 </template>

@@ -9,23 +9,7 @@
 
             <div class="collapse navbar-collapse">
                 <form class="navbar-form navbar-right">
-                    <div class="input-group lg-aa-control lg-aa-control--com-icone">
-                         <span class="input-group-addon lg-aa-control-icone">
-                            <i class="glyphicon glyphicon-search"></i>
-                         </span>
-
-                         <input class="form-control lg-aa-control lg-aa-control-input"
-                                placeholder="Pesquisar no Portal" />
-                    </div>
-                    <button class="btn lg-aa-btn-icon"><i class="fa fa-cogs"></i></button>
-                    <button class="btn lg-aa-btn-icon"><i class="fa fa-puzzle-piece"></i></button>
-                    <button class="btn lg-aa-btn-icon"><i class="fa fa-sliders"></i></button>
-                    <button class="btn lg-aa-btn-icon"><i class="fa fa-filter"></i></button>
-                    <lg-aa-botao-toggle iconePrimario="glyphicon glyphicon-th-large"
-                                        iconeSecundario="glyphicon glyphicon-th-list"
-                                        textoPrimario="Visualizar em Grade"
-                                        textoSecundario="Visualizar em Lista">
-                    </lg-aa-botao-toggle>
+                    <slot></slot>
                 </form>
             </div>
        </div>
@@ -59,12 +43,5 @@ export default class Painel extends Vue {
 }
 .lg-aa-control-input {
     border: 0px;
-}
-
-.lg-aa-btn-icon {
-    border-radius: 50%;
-    margin: 0px 3px;
-    background: transparent;
-    border: 1px solid #CFCFCF;
 }
 </style>
