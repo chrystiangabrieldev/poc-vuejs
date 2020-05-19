@@ -13,6 +13,7 @@
         </div>
       </lg-aa-navbar-conteudo>
     </lg-aa-navbar>
+    <lg-aa-painel></lg-aa-painel>
     <div class="container"></div>
   </div>
 </template>

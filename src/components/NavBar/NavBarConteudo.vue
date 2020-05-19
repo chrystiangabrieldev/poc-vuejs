@@ -1,4 +1,4 @@
-<template name="component-name">
+<template>
     <div class="collapse navbar-collapse">
         <form class="navbar-form navbar-right">
             <div class="form-group row">
@@ -17,7 +17,4 @@ export default class NavBarConteudo extends Vue {
 </script>
 
 <style lang="scss">
-.col-4 {
-  border: 1px solid red;
-}
 </style>
