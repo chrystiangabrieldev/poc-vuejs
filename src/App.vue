@@ -13,7 +13,7 @@
         </div>
       </lg-aa-navbar-conteudo>
     </lg-aa-navbar>
-    <lg-aa-painel></lg-aa-painel>
+    <lg-aa-painel titulo="Minhas Atividades"></lg-aa-painel>
     <div class="container"></div>
   </div>
 </template>

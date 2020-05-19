@@ -3,7 +3,7 @@
        <div class="container-fluid">
            <div class="navbar-header">
                <a class="navbar-brand lg-aa-painel__texto">
-                   Minhas Atividades
+                  {{titulo}}
                </a>
            </div>
 
@@ -21,7 +21,11 @@
                     <button class="btn lg-aa-btn-icon"><i class="fa fa-puzzle-piece"></i></button>
                     <button class="btn lg-aa-btn-icon"><i class="fa fa-sliders"></i></button>
                     <button class="btn lg-aa-btn-icon"><i class="fa fa-filter"></i></button>
-                    
+                    <lg-aa-botao-toggle iconePrimario="glyphicon glyphicon-th-large"
+                                        iconeSecundario="glyphicon glyphicon-th-list"
+                                        textoPrimario="Visualizar em Grade"
+                                        textoSecundario="Visualizar em Lista">
+                    </lg-aa-botao-toggle>
                 </form>
             </div>
        </div>
@@ -29,10 +33,11 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue, Prop } from 'vue-property-decorator';
 
 @Component
 export default class Painel extends Vue {
+    @Prop({ required: true }) titulo: string;
 }
 </script>
 
