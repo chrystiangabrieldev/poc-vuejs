@@ -1,5 +1,5 @@
 <template name="lg-aa-navbar">
-    <nav class="navbar navbar-default lg-aa-fundo--primario">
+    <nav class="navbar navbar-default lg-aa-fundo--primario p-2">
         <div class="navbar-fluid">
             <slot></slot>
         </div>

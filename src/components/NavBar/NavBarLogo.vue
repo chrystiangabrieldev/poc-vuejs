@@ -1,5 +1,5 @@
 <template name="component-name">
-    <div class="navbar-header">
+    <div class="navbar-header lg-aa-navbar-logo">
         <a href="#" class="lg-aa-navbar-brand" id="brand">
             <button class="btn lg-aa-menu">
                 <div class="lg-aa-menu__barra"></div>
@@ -18,7 +18,7 @@
 import { Component, Vue, Prop } from 'vue-property-decorator';
 
 @Component
-export default class NavBarHeader extends Vue {
+export default class NavBarLogo extends Vue {
     @Prop() logo: string;
 
     @Prop({ required: true }) textoLogo: string;
@@ -31,6 +31,9 @@ export default class NavBarHeader extends Vue {
 </script>
 
 <style lang="scss">
+.lg-aa-navbar-logo {
+    margin: 0px 5px;
+}
 .lg-aa-navbar-brand {
     display: flex;
     padding: 5px;

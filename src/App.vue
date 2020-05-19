@@ -1,8 +1,17 @@
 <template>
   <div id="app">
     <lg-aa-navbar>
-      <lg-aa-navbar-header textoLogo="LG lugar de Gente"
-                           logo="https://www.lg.com.br/site2017/uploads/logo.png"></lg-aa-navbar-header>
+      <lg-aa-navbar-logo textoLogo="LG lugar de Gente"
+                           logo="https://www.lg.com.br/site2017/uploads/logo.png"></lg-aa-navbar-logo>
+
+      <lg-aa-navbar-conteudo>
+        <div class="col-6">
+          <lg-aa-avatar nomeColabolador="Chrystian Gabriel"
+                        eImagem="true"
+                        imagem="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzlDPRr1xSW0lukY2EmVpAx5Ye1S8H5luUVOK2IqFdcsjCDQxK&s">
+          </lg-aa-avatar>
+        </div>
+      </lg-aa-navbar-conteudo>
     </lg-aa-navbar>
     <div class="container"></div>
   </div>
