@@ -1,0 +1,16 @@
+<template>
+    <div class="panel panel-default">
+        <div class="panel-body">Panel Content</div>
+    </div>
+</template>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+
+@Component
+export default class Card extends Vue {
+}
+</script>
+
+<style lang="scss">
+</style>

@@ -1,6 +1,6 @@
 <template>
     <span class="lg-aa-botao-toggle">
-        <input type="checkbox" id="botao-toggle" v-model="marcado"/>
+        <input type="checkbox" id="botao-toggle" v-on:change="clicouNoBotao" v-model="marcado"/>
         <label for="botao-toggle" class="lg-aa-botao-toggle_label">
             <i :class="iconeAtual"></i>
              {{textoAtual}}
@@ -23,22 +23,25 @@ export default class BotaoToggle extends Vue {
 
     @Prop({ default: '#0070BC' }) corIcone: string;
 
-    @Prop({ default: true }) marcado
+    @Prop({ default: false }) marcado: boolean;
 
     get iconeAtual() {
-      if (this.marcado) {
+      if (!this.marcado) {
         return this.iconePrimario;
       }
-
       return this.iconeSecundario;
     }
 
     get textoAtual() {
-      if (this.marcado) {
+      if (!this.marcado) {
         return this.textoPrimario;
       }
 
       return this.textoSecundario;
+    }
+
+    clicouNoBotao() {
+      this.hubDeEventos.$emit('botao', this.marcado);
     }
 }
 </script>

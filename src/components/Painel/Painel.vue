@@ -1,5 +1,5 @@
-<template name="component-name">
-   <div class="navbar navbar-default lg-aa-painel">
+<template>
+   <div class="navbar navbar-default lg-aa-painel m-0">
        <div class="container-fluid">
            <div class="navbar-header">
                <a class="navbar-brand lg-aa-painel__texto">

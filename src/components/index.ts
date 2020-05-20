@@ -5,6 +5,11 @@ import PainelPlugin from './Painel';
 import BotaoTogglePlugin from './BotaoToggle';
 import InputIconePlugin from './InputIcone';
 import BotaoIcone from './BotaoIcone';
+import FieldsetPlugin from './Fieldset';
+import ContainerListPlugin from './ContainerList';
+import ContainerTogglePlugin from './ContainerToggle';
+import CardPlugin from './Card';
+import ContainerGridPlugin from './ContainerGrid';
 
 export default function API(Vue: typeof _Vue, options?: any): void {
   Vue.use(NavBarPlugin);
@@ -13,4 +18,9 @@ export default function API(Vue: typeof _Vue, options?: any): void {
   Vue.use(BotaoTogglePlugin);
   Vue.use(InputIconePlugin);
   Vue.use(BotaoIcone);
+  Vue.use(FieldsetPlugin);
+  Vue.use(ContainerListPlugin);
+  Vue.use(ContainerTogglePlugin);
+  Vue.use(CardPlugin);
+  Vue.use(ContainerGridPlugin);
 }

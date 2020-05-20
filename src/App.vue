@@ -37,7 +37,7 @@
                             textoSecundario="Visualizar em Lista">
         </lg-aa-botao-toggle>
     </lg-aa-painel>
-    <div class="container"></div>
+    <lg-aa-container-toggle></lg-aa-container-toggle>
   </div>
 </template>
 
@@ -49,5 +49,5 @@ export default class App extends Vue {}
 </script>
 
 <style lang="scss">
-  @import url('https://cdn1.lg.com.br/autoatendimento/1.0.0/css/lg.build.min.css')
+  @import url('https://cdn1.lg.com.br/autoatendimento/1.0.0/css/lg.build.min.css');
 </style>
