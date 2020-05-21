@@ -1,7 +1,7 @@
 <template>
     <span class="lg-aa-botao-toggle">
         <input type="checkbox" id="botao-toggle" v-on:change="clicouNoBotao" v-model="marcado"/>
-        <label for="botao-toggle" class="lg-aa-botao-toggle_label">
+        <label for="botao-toggle" class="btn lg-aa-botao-toggle_label">
             <i :class="iconeAtual"></i>
              {{textoAtual}}
         </label>
@@ -41,7 +41,7 @@ export default class BotaoToggle extends Vue {
     }
 
     clicouNoBotao() {
-      this.hubDeEventos.$emit('botao', this.marcado);
+      this.hubDeEventos.$emit('botao-toggle-click', this.marcado);
     }
 }
 </script>

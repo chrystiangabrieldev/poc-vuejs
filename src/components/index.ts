@@ -10,6 +10,7 @@ import ContainerListPlugin from './ContainerList';
 import ContainerTogglePlugin from './ContainerToggle';
 import CardPlugin from './Card';
 import ContainerGridPlugin from './ContainerGrid';
+import ConteudoExternoPlugin from './ConteudoExterno';
 
 export default function API(Vue: typeof _Vue, options?: any): void {
   Vue.use(NavBarPlugin);
@@ -23,4 +24,5 @@ export default function API(Vue: typeof _Vue, options?: any): void {
   Vue.use(ContainerTogglePlugin);
   Vue.use(CardPlugin);
   Vue.use(ContainerGridPlugin);
+  Vue.use(ConteudoExternoPlugin);
 }

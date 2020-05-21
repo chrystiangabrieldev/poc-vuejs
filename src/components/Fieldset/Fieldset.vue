@@ -36,7 +36,7 @@ export default class Fieldset extends Vue {
     padding-left: 15px;
 }
 .lg-aa-fieldset__info{
-   padding: 5px;
+   padding: 5px 10px;
    border-radius: 5px;
    background: #CFE5F8;
    color: #0E538F;

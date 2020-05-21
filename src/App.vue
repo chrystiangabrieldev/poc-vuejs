@@ -37,15 +37,52 @@
                             textoSecundario="Visualizar em Lista">
         </lg-aa-botao-toggle>
     </lg-aa-painel>
-    <lg-aa-container-toggle></lg-aa-container-toggle>
+    <lg-aa-container-toggle>
+        <lg-aa-container-list slot="primeiro-container"
+                              :itens="atividades">
+
+          <lg-aa-card v-for="atividade in atividades"
+                      :informacoes="atividade.informacoes"
+                      :acoes="atividade.acoes"
+                      :key="atividade.Id"
+                      :status="atividade.status"
+                      :nome="atividade.colaborador.nome"
+                      :cargo="atividade.colaborador.cargo"
+                      :avatar="atividade.colaborador.avatar">
+          </lg-aa-card>
+
+        </lg-aa-container-list>
+
+        <lg-aa-container-grid slot="segundo-container"
+                              :itens="atividades">
+
+          <li v-for="atividade in atividades" :key="atividade.Id">
+            <lg-aa-card :informacoes="atividade.informacoes"
+                        :acoes="atividade.acoes"
+                        tamanho="430"
+                        :status="atividade.status"
+                        :nome="atividade.colaborador.nome"
+                        :cargo="atividade.colaborador.cargo"
+                        :avatar="atividade.colaborador.avatar">
+            </lg-aa-card>
+          </li>
+        </lg-aa-container-grid>
+    </lg-aa-container-toggle>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue, Prop } from 'vue-property-decorator';
+import AtividadesMock from './mock/mock';
 
 @Component
-export default class App extends Vue {}
+export default class App extends Vue {
+  @Prop() atividades: any;
+
+  async created() {
+    this.atividades = await AtividadesMock.obtenhaAtividades();
+  }
+}
 </script>
 
 <style lang="scss">

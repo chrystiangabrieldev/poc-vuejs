@@ -1,8 +1,8 @@
 <template name="component-name">
     <span>
-        <button class="btn lg-aa-btn-icon">
+        <a class="btn lg-aa-btn-icon">
             <i :class="icone"></i>
-        </button>
+        </a>
     </span>
 </template>
 
@@ -21,5 +21,6 @@ export default class BotaoIcone extends Vue {
     margin: 0px 3px;
     background: transparent;
     border: 1px solid #CFCFCF;
+    color: #000;
 }
 </style>

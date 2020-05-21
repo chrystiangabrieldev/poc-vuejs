@@ -1,6 +1,12 @@
 <template>
-   <lg-aa-fieldset legenda="Atividades" class="lg-aa-container-list">
-       <slot v-for="item in itens">{{item}}</slot>
+   <lg-aa-fieldset legenda="Atividades"
+                   informacaoTexto="Total:"
+                   :informacaoNumero="quantidadeElementos"
+                   class="lg-aa-container-list">
+
+       <div class="lg-aa-field__container">
+           <slot></slot>
+       </div>
    </lg-aa-fieldset>
 </template>
 
@@ -11,12 +17,19 @@ import { Component, Vue, Prop } from 'vue-property-decorator';
 export default class ContainerList extends Vue {
     @Prop() legenda: string;
 
-    @Prop() itens = [1, 2, 3, 4, 5, 6, 7, 8];
+    @Prop() itens: Array;
+
+    get quantidadeElementos() {
+      return this.itens.length;
+    }
 }
 </script>
 
 <style lang="scss">
 .lg-aa-container-list {
     border: 1px solid #CFCFCF;
+}
+.lg-aa-field__container {
+  padding: 0px 45px;
 }
 </style>

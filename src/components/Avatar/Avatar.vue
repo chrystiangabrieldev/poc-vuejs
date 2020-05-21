@@ -1,7 +1,7 @@
 <template>
-    <div class="lg-aa-avatar" :style="estiloPadrao">
+    <span class="lg-aa-avatar" :style="estiloPadrao">
         <span v-show="!eImagem">{{iniciaisDoColaborador}}</span>
-    </div>
+    </span>
 </template>
 
 
